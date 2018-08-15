@@ -1,2 +1,33 @@
-<h1>FoodMenues#top</h1>
-<p>Find me in app/views/food_menues/top.html.erb</p>
+<div id="fixed_header">
+  <div id="notice">
+  <div id="notice_area">
+    <%= notice %>
+  </div>
+  </div>
+  
+  <div id="title">
+  <div id="title_area">
+    メニューリスト
+  </div>
+  </div>
+</div>
+
+<div id="container">
+<div id="container_area_header_fixed_page">
+  <div class=right-align><%= link_to "新規作成", "/food_menues/new" %></div>
+
+  <% @foods.each do |food| %>
+    <div class="menu">
+    <div class="menu-area clearfix">
+      <h1 class="menu-area-title"><%= food.menu %></h1>
+      <p><%= simple_format(food.description) %></p>
+      <ul>
+        <li><%= link_to "表示", "/food_menues/show/#{food.id}" %></li>
+        <li><%= link_to "編集", "/food_menues/edit/#{food.id}" %></li>
+        <li><%= link_to "削除", "/food_menues/destroy_confirm/#{food.id}" %></li>
+      </ul>
+    </div>
+    </div>
+  <% end %>
+</div>
+</div>

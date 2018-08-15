@@ -1,0 +1,40 @@
+<div id="input_form_area">
+  <% # 移動先のアクション名、およびボタンの表示名を求める                 %>
+  <% # ※フォームの入力に失敗した場合、                                   %>
+  <% #          ・編集の場合はupdateアクション                            %>
+  <% #          ・新規作成の場合はcreateアクション　　　が移動元となる    %>
+  <% if ((controller.action_name == "edit"  ) ||                          %>
+  <%     (controller.action_name == "update"))                            %>
+  <%   dst_act = "update"                                                 %>
+  <%   button_msg = "更新"                                                %>
+  <% else # action_name == "new" or action_name == "create"               %>
+  <%   dst_act = "create"                                                 %>
+  <%   button_msg = "作成"                                                %>
+  <% end                                                                  %>
+  
+  <%= form_for(@food, :url => {:action => dst_act}) do |f| %>
+    <% if @food.errors.any? %>
+      <div id="error_msg_area">
+        <span class="red-background white-color"><%= @food.errors.count %> 個のエラーがあります。</span>
+  
+        <ul>
+        <% @food.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    <%= f.label :menu %>
+    <br>
+    <%= f.text_field :menu %>
+    <br>
+    <br>
+    <%= f.label :description %>
+    <br>
+    <%= f.text_area :description %>
+    <br>
+  
+    <%= f.submit button_msg, :id=>"button" %>
+  <% end %>
+</div>

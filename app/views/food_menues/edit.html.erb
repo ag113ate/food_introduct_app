@@ -1,0 +1,20 @@
+<div id="not_fixed_header">
+  <div id="title">
+  <div id="title_area">
+    編集ページ
+  </div>
+  </div>
+</div>
+
+<div id="container">
+<div id="container_area_header_not_fixed_page">
+  <%= render "input_form" %>
+
+  <div id="navi">
+    <ul>
+      <li><%= link_to "トップ画面", "/food_menues/top" %></li>
+      <li><%= link_to "表示画面", "/food_menues/show/#{@food.id}" %></li>
+    </ul>
+  </div>
+</div>
+</div>
