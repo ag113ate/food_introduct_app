@@ -1,0 +1,27 @@
+<div id="not_fixed_header">
+  <div id="notice">
+  <div id="notice_area">
+    <%= notice %>
+  </div>
+  </div>
+  
+  <div id="title">
+  <div id="title_area">
+    メニュー情報
+  </div>
+  </div>
+</div>
+
+<div id="container">
+<div id="container_area_header_not_fixed_page">
+  <%= render "disp_form" %>
+
+  <div id="navi">
+    <ul>
+      <li><%= link_to "トップ画面", "/food_menues/top" %></li>
+      <li><%= link_to "編集", "/food_menues/edit/#{@food.id}" %></li>
+      <li><%= link_to "削除", "/food_menues/destroy_confirm/#{@food.id}" %></li>
+    </ul>
+  </div>
+</div>
+</div>

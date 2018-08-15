@@ -1,5 +1,17 @@
 FoodIntroductApp::Application.routes.draw do
   get "food_menues/top"
+  get "food_menues/top"
+  get "food_menues/new"
+  get "food_menues/edit/:id" => "food_menues#edit"
+  get "food_menues/show/:id" => "food_menues#show"
+  get "food_menues/destroy_confirm/:id" => "food_menues#destroy_confirm"
+  
+  post "food_menues/create"
+  
+  patch "food_menues/update/:id" => "food_menues#update"
+  
+  delete "food_menues/destroy/:id" => "food_menues#destroy"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,28 @@
+<div id="not_fixed_header">
+  <div id="title">
+  <div id="title_area">
+    削除ページ
+  </div>
+  </div>
+</div>
+
+<div id="container">
+<div id="container_header_not_fixed_page">
+  <%= render "disp_form" %>
+
+  <div id="destroy_confirm_area" class="clearfix">
+    本当に削除しますか。
+    <!-- アクセス元のURLを求める(キャンセル時の移動先) -->
+    <% if @act == "top"                 %>
+    <%   url="/food_menues/top"               %>
+    <% else  # "@act == show"の場合     %>
+    <%   url="/food_menues/show/#{@food.id}"  %>
+    <% end                              %>
+
+    <ul>
+      <li><%= link_to "削除", "/food_menues/destroy/#{@food.id}", method: :delete %></li>
+      <li><%= link_to "キャンセル", url %></li>
+    </ul>
+  </div>
+</div>
+</div>

@@ -1,3 +1,189 @@
 // Place all the styles related to the FoodMenues controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#fixed_header{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 10;
+}
+
+div#not_fixed_header{
+  height: 80px;
+  width: 100%;
+}
+
+div#notice{
+  height: 30px;
+  width: 100%;
+  background-color: white;
+}
+
+div#notice_area{
+  text-align: center;
+  color: red;
+  font-size: 25px;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+div#title{
+  height: 50px;
+  width: 100%;
+  background-color: orange;
+}
+
+div#title_area{
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+div#container{
+  width: 100%;
+}
+div#container_area_header_fixed_page{
+  padding: 80px 0 0 0;
+  
+  margin: 0 auto;
+  width: 1000px;
+}
+
+div#container_area_header_not_fixed_page{
+  padding: 10px 0 0 0;
+  
+  margin: 0 auto;
+  width: 1000px;
+  
+  
+}
+
+div.menu{
+  width: 100%;
+  background-color: #33CCFF;
+  margin: 10px 0 0 10px;
+  
+  -moz-border-radius:10px;/* Firefox用の角丸設定 */
+  -webkit-border-radius:10px; /* Safari,Google Chrome用の角丸設定 */
+  border-radius:10px; /* 角丸設定 */
+}
+
+div.menu-area{
+  // margin: 0 auto;
+  // width: 1000px;
+  color: white;
+  padding: 10px;
+  
+  border: 1px dotted white;
+}
+
+div.menu-area .menu-area-title{
+  border-bottom: 1px dotted white;
+}
+
+div.menu-area ul{
+  float: right;
+  border: 1px dotted white;
+}
+
+div.menu-area li{
+  float: left;
+  margin: 0 5px 0 5px;
+}
+
+div#menu_disp_area{
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #33CCFF;
+  padding: 10px;
+  color: white;
+  
+  -moz-border-radius:10px;/* Firefox用の角丸設定 */
+  -webkit-border-radius:10px; /* Safari,Google Chrome用の角丸設定 */
+  border-radius:10px; /* 角丸設定 */  
+}
+
+div#menu_title_area{
+  font-size: 30px;
+  text-align: center;
+  
+  border-bottom: 1px dotted white;
+}
+
+div#menu_desc_area{
+  padding: 10px 0 0 0;
+  font-size: 30px;
+}
+
+div#navi ul{
+  float: right;
+}
+
+div#navi li{
+  float: left;
+  margin: 0 5px 0 5px;
+}
+
+div#input_form_area{
+  width: 1000px;
+  margin: 0 auto;
+  
+  font-size: 20px;
+  text-align: center;
+}
+
+div#error_msg_area{
+  color: red;
+  margin: 0 0 20px 0;
+}
+
+
+#button{
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+}
+
+#food_menu{
+  width: 800px;
+  font-size: 20px;
+}
+
+#food_description{
+  width:  800px;
+  height: 200px;
+  font-size: 20px;
+}
+
+div#destroy_confirm_area{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  
+  font-size: 20px;
+  text-align: center;
+}
+
+div#destroy_confirm_area li{
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.center_align{
+  text-align: center;
+}
+
+.right-align{
+  text-align: right;
+}
+
+.red-background{
+  background-color: red;
+}
+
+.white-color{
+  color: white;
+}
